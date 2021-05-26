@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Card.css';
 
 export default function Card({id, name, date, time, number}) {
   return (
-    <div>
+    <div id={id} className='card'>
       <span>{name}</span>
       <span>{date}</span>
       <span>{time}</span>

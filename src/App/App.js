@@ -25,7 +25,9 @@ class App extends Component {
   }
 
   handleClick = (request) => {
+    console.log(request)
     this.state.reservations.push(request);
+    console.log(this.state.reservations)
   }
 
 

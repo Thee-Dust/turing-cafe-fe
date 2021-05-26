@@ -16,7 +16,7 @@ export default function CardDisplay({ reservations }) {
   })
 
   return (
-    <div>
+    <div className='card-display'>
       {reservationCards}
     </div>
   )

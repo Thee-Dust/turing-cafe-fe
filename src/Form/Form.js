@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Form.css'
 
 export default class Form extends Component {
   constructor(props) {
@@ -20,10 +21,10 @@ export default class Form extends Component {
     e.preventDefault();
     const request = {
       id: Date.now(),
-      name: this.state.nameInput.value,
-      date: this.state.dateInput.value,
-      time: this.state.timeInput.value,
-      number: this.state.guestInput.value,
+      name: this.state.nameInput,
+      date: this.state.dateInput,
+      time: this.state.timeInput,
+      number: this.state.guestInput,
     }
     this.props.handleClick(request);
     this.setState({
@@ -36,7 +37,7 @@ export default class Form extends Component {
 
   render() {
     return (
-      <div>
+      <div className='input-feild'>
         <input type='text' name="nameInput" value={this.state.nameInput} placeholder='Name' onChange={(event) => this.onChange(event)}/>
         <input type='date' name="dateInput" value={this.state.dateInput} placeholder='Date (mm/dd)' onChange={(event) => this.onChange(event)}/>
         <input type='time' name="timeInput" value={this.state.timeInput} placeholder='Time' onChange={(event) => this.onChange(event)}/>
