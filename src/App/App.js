@@ -35,12 +35,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
-          <Form handleClick={this.handleClick} />
-        </div>
-        <div className='resy-container'>
-          <Card reservations={this.state.reservations}/>
-        </div>
+        <Form handleClick={this.handleClick} />
+        <Card reservations={this.state.reservations}/>
       </div>
     )
   }

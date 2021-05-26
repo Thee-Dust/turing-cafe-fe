@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card';
+import './CardDisplay.css'
 
 export default function CardDisplay({ reservations }) {
   const reservationCards = reservations.map(reservation => {
