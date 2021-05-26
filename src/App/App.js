@@ -25,9 +25,7 @@ class App extends Component {
   }
 
   handleClick = (request) => {
-    console.log(request)
     this.setState({reservations: [...this.state.reservations, request]});
-    console.log(this.state.reservations);
   }
 
 
