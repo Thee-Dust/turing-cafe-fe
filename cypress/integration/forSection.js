@@ -1,9 +1,11 @@
 describe("Form", () => {
   beforeEach(() => {
-    crypto.visit('/')
+    cy.visit('/')
   })
 
-  instanceof('should be able to type into name section', () => {
-    crypto.get('input')
+  it('should be able to type into name section', () => {
+    cy.get('input[name=nameInput]').type('Dustin')
   })
+
+  it('should be able to select date')
 })

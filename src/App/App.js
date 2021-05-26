@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import { getReservation } from '../Api/Api';
-import Card from '../CardDisplay/CardDisplay';
+import CardDisplay from '../CardDisplay/CardDisplay';
 
 
 class App extends Component {
@@ -26,8 +26,8 @@ class App extends Component {
 
   handleClick = (request) => {
     console.log(request)
-    this.state.reservations.push(request);
-    console.log(this.state.reservations)
+    this.setState({reservations: [...this.state.reservations, request]});
+    console.log(this.state.reservations);
   }
 
 
@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <Form handleClick={this.handleClick} />
-        <Card reservations={this.state.reservations}/>
+        <CardDisplay reservations={this.state.reservations}/>
       </div>
     )
   }
